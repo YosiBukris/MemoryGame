@@ -15,6 +15,8 @@
 		E26987852445EEB600DBEB22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E26987832445EEB600DBEB22 /* LaunchScreen.storyboard */; };
 		E26987902445EEB600DBEB22 /* MemoryGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269878F2445EEB600DBEB22 /* MemoryGameTests.swift */; };
 		E269879B2445EEB700DBEB22 /* MemoryGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269879A2445EEB700DBEB22 /* MemoryGameUITests.swift */; };
+		E26B5D25245AF6DE002DB2AB /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26B5D24245AF6DE002DB2AB /* Card.swift */; };
+		E26B5D27245AFEA1002DB2AB /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26B5D26245AFEA1002DB2AB /* MemoryGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		E26987962445EEB700DBEB22 /* MemoryGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoryGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E269879A2445EEB700DBEB22 /* MemoryGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameUITests.swift; sourceTree = "<group>"; };
 		E269879C2445EEB700DBEB22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E26B5D24245AF6DE002DB2AB /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		E26B5D26245AFEA1002DB2AB /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				E26987812445EEB600DBEB22 /* Assets.xcassets */,
 				E26987832445EEB600DBEB22 /* LaunchScreen.storyboard */,
 				E26987862445EEB600DBEB22 /* Info.plist */,
+				E26B5D24245AF6DE002DB2AB /* Card.swift */,
+				E26B5D26245AFEA1002DB2AB /* MemoryGame.swift */,
 			);
 			path = MemoryGame;
 			sourceTree = "<group>";
@@ -261,7 +267,9 @@
 			files = (
 				E269877D2445EEB600DBEB22 /* ViewController.swift in Sources */,
 				E26987792445EEB600DBEB22 /* AppDelegate.swift in Sources */,
+				E26B5D27245AFEA1002DB2AB /* MemoryGame.swift in Sources */,
 				E269877B2445EEB600DBEB22 /* SceneDelegate.swift in Sources */,
+				E26B5D25245AF6DE002DB2AB /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

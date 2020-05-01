@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,306 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemoryGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleAspectFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skyBackground" translatesAutoresizingMaskIntoConstraints="NO" id="N1T-8o-fw1">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MEMORY GAME" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PwO-sc-82L">
+                                <rect key="frame" x="10" y="64" width="394" height="53"/>
+                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <viewLayoutGuide key="safeArea" id="Jxy-Rb-HYr"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="40"/>
+                                <color key="textColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="vm6-0X-Pw1" userLabel="Cards">
+                                <rect key="frame" x="10" y="164" width="394" height="588"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="z6A-uB-i27">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="128.33333333333334"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gX9-fN-ZVZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="79.666666666666671" height="128.33333333333334"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                </accessibility>
+                                                <state key="normal" backgroundImage="memory"/>
+                                                <connections>
+                                                    <action selector="cardClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E9j-Jy-cuS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRo-N8-8qM">
+                                                <rect key="frame" x="104.66666666666669" y="0.0" width="80" height="128.33333333333334"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                </accessibility>
+                                                <state key="normal" backgroundImage="memory"/>
+                                                <connections>
+                                                    <action selector="cardClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tRH-f5-94U"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4T-p1-ImL">
+                                                <rect key="frame" x="209.66666666666666" y="0.0" width="79.666666666666657" height="128.33333333333334"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                </accessibility>
+                                                <state key="normal" backgroundImage="memory"/>
+                                                <connections>
+                                                    <action selector="cardClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LQb-iY-5sZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHu-yR-U3c">
+                                                <rect key="frame" x="314.33333333333331" y="0.0" width="79.666666666666686" height="128.33333333333334"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                </accessibility>
+                                                <state key="normal" backgroundImage="memory"/>
+                                                <connections>
+                                                    <action selector="cardClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="67j-0T-IbZ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="sel-Bm-3PH">
+                                        <rect key="frame" x="0.0" y="153.33333333333331" width="394" height="128.33333333333331"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uh6-Hl-8uN">
+                                                <rect key="frame" x="0.0" y="0.0" width="74.666666666666671" height="128.33333333333334"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                </accessibility>
+                                                <state key="normal" backgroundImage="memory"/>
+                                                <connections>
+                                                    <action selector="cardClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FkP-hX-WMx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdL-lr-T2x">
+                                                <rect key="frame" x="106.66666666666669" y="0.0" width="74.333333333333314" height="128.33333333333334"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                </accessibility>
+                                                <state key="normal" backgroundImage="memory"/>
+                                                <connections>
+                                                    <action selector="cardClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i8I-h2-Myg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N99-Gf-9bZ">
+                                                <rect key="frame" x="213" y="0.0" width="74.666666666666686" height="128.33333333333334"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                </accessibility>
+                                                <state key="normal" backgroundImage="memory"/>
+                                                <connections>
+                                                    <action selector="cardClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gug-TH-fuP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tls-2n-vWI">
+                                                <rect key="frame" x="319.66666666666669" y="0.0" width="74.333333333333314" height="128.33333333333334"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                </accessibility>
+                                                <state key="normal" backgroundImage="memory"/>
+                                                <connections>
+                                                    <action selector="cardClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JWc-GZ-5Jg"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="p0b-ev-NTq">
+                                        <rect key="frame" x="0.0" y="306.66666666666669" width="394" height="128"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="31" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="erz-e7-2ds">
+                                                <rect key="frame" x="0.0" y="0.0" width="74.666666666666671" height="128"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                </accessibility>
+                                                <state key="normal" backgroundImage="memory"/>
+                                                <connections>
+                                                    <action selector="cardClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yQi-2I-Bbs"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="32" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2MJ-bG-gZS">
+                                                <rect key="frame" x="106.66666666666669" y="0.0" width="74.333333333333314" height="128"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                </accessibility>
+                                                <state key="normal" backgroundImage="memory"/>
+                                                <connections>
+                                                    <action selector="cardClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hnU-hx-1oa"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="33" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHb-ZL-Mhr">
+                                                <rect key="frame" x="213" y="0.0" width="74.666666666666686" height="128"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                </accessibility>
+                                                <state key="normal" backgroundImage="memory"/>
+                                                <connections>
+                                                    <action selector="cardClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UO6-eJ-8kY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="34" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHt-Ye-JlK">
+                                                <rect key="frame" x="319.66666666666669" y="0.0" width="74.333333333333314" height="128"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                </accessibility>
+                                                <state key="normal" backgroundImage="memory"/>
+                                                <connections>
+                                                    <action selector="cardClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PBo-ES-8aG"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="HD6-uZ-JhN">
+                                        <rect key="frame" x="0.0" y="459.66666666666657" width="394" height="128.33333333333331"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="41" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQK-cx-hbq">
+                                                <rect key="frame" x="0.0" y="0.0" width="74.666666666666671" height="128.33333333333334"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                </accessibility>
+                                                <state key="normal" backgroundImage="memory"/>
+                                                <connections>
+                                                    <action selector="cardClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f6c-Fz-gy4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="42" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arY-BN-Gdw">
+                                                <rect key="frame" x="106.66666666666669" y="0.0" width="74.333333333333314" height="128.33333333333334"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                </accessibility>
+                                                <state key="normal" backgroundImage="memory"/>
+                                                <connections>
+                                                    <action selector="cardClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aar-Sf-tG1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="43" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OcB-tg-apN">
+                                                <rect key="frame" x="213" y="0.0" width="74.666666666666686" height="128.33333333333334"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                </accessibility>
+                                                <state key="normal" backgroundImage="memory"/>
+                                                <connections>
+                                                    <action selector="cardClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mrn-M3-ycl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="44" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4HU-pW-VDW">
+                                                <rect key="frame" x="319.66666666666669" y="0.0" width="74.333333333333314" height="128.33333333333334"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                </accessibility>
+                                                <state key="normal" backgroundImage="memory"/>
+                                                <connections>
+                                                    <action selector="cardClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GXs-yG-AhS"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ddJ-ch-5xQ" userLabel="BottomLBL">
+                                <rect key="frame" x="19.666666666666657" y="763.66666666666663" width="375" height="88.333333333333371"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kdb-FD-5KB" userLabel="StackMoves">
+                                        <rect key="frame" x="0.0" y="0.0" width="115" height="88.333333333333329"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moves" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXS-kH-rVx">
+                                                <rect key="frame" x="21.333333333333336" y="0.0" width="72.333333333333314" height="32.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYh-nR-8zK">
+                                                <rect key="frame" x="34.666666666666671" y="42.666666666666742" width="45.666666666666671" height="45.666666666666657"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="35"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h02-XC-gKJ">
+                                        <rect key="frame" x="130" y="0.0" width="115" height="88.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="29"/>
+                                        <state key="normal" title="RESTART">
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="resetGameClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cFh-1W-gZH"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KvV-xU-gV0" userLabel="StackTime">
+                                        <rect key="frame" x="260" y="0.0" width="115" height="88.333333333333329"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j83-WD-4PV">
+                                                <rect key="frame" x="29.999999999999996" y="0.0" width="54.666666666666657" height="32.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRQ-U6-3Y5">
+                                                <rect key="frame" x="34.666666666666629" y="42.666666666666742" width="45.666666666666657" height="45.666666666666657"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="35"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PwO-sc-82L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="3WF-lI-lyH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vm6-0X-Pw1" secondAttribute="trailing" constant="10" id="7cM-Tk-O2G"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PwO-sc-82L" secondAttribute="trailing" constant="10" id="8Sv-hu-rGC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ddJ-ch-5xQ" secondAttribute="bottom" constant="10" id="Bd5-1a-QAN"/>
+                            <constraint firstItem="vm6-0X-Pw1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="PwO-sc-82L" secondAttribute="top" constant="100" id="DrW-9J-EUn"/>
+                            <constraint firstItem="vm6-0X-Pw1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="NtB-lv-do6"/>
+                            <constraint firstItem="N1T-8o-fw1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PSO-Lg-D2q"/>
+                            <constraint firstItem="PwO-sc-82L" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="ZEz-sG-Kyj"/>
+                            <constraint firstItem="ddJ-ch-5xQ" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vm6-0X-Pw1" secondAttribute="bottom" constant="100" id="e6A-xL-aeZ"/>
+                            <constraint firstAttribute="bottom" secondItem="N1T-8o-fw1" secondAttribute="bottom" id="ecS-Lz-GzA"/>
+                            <constraint firstItem="N1T-8o-fw1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="o3c-GB-lRz"/>
+                            <constraint firstItem="ddJ-ch-5xQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rVt-j1-R58"/>
+                            <constraint firstAttribute="trailing" secondItem="N1T-8o-fw1" secondAttribute="trailing" id="sg6-d3-ZML"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="MAIN_BTN_00" destination="gX9-fN-ZVZ" id="rPO-Ej-es8"/>
+                        <outlet property="MAIN_BTN_01" destination="iRo-N8-8qM" id="D18-U0-vDr"/>
+                        <outlet property="MAIN_BTN_02" destination="m4T-p1-ImL" id="F04-tq-pVF"/>
+                        <outlet property="MAIN_BTN_03" destination="UHu-yR-U3c" id="xuI-Ko-eY6"/>
+                        <outlet property="MAIN_BTN_10" destination="Uh6-Hl-8uN" id="yV5-wl-MY6"/>
+                        <outlet property="MAIN_BTN_11" destination="JdL-lr-T2x" id="WPP-O3-au6"/>
+                        <outlet property="MAIN_BTN_12" destination="N99-Gf-9bZ" id="72O-fC-PSx"/>
+                        <outlet property="MAIN_BTN_13" destination="tls-2n-vWI" id="poj-vw-zaa"/>
+                        <outlet property="MAIN_BTN_20" destination="erz-e7-2ds" id="d92-xv-4FK"/>
+                        <outlet property="MAIN_BTN_21" destination="2MJ-bG-gZS" id="ir9-oW-3ML"/>
+                        <outlet property="MAIN_BTN_22" destination="AHb-ZL-Mhr" id="gib-Hz-vOd"/>
+                        <outlet property="MAIN_BTN_23" destination="wHt-Ye-JlK" id="ish-7X-dBs"/>
+                        <outlet property="MAIN_BTN_30" destination="LQK-cx-hbq" id="qaW-3N-2OG"/>
+                        <outlet property="MAIN_BTN_31" destination="arY-BN-Gdw" id="ghp-C5-mmQ"/>
+                        <outlet property="MAIN_BTN_32" destination="OcB-tg-apN" id="OLG-V9-4kC"/>
+                        <outlet property="MAIN_BTN_33" destination="4HU-pW-VDW" id="soT-FL-wav"/>
+                        <outlet property="MAIN_BTN_START" destination="h02-XC-gKJ" id="AS7-IK-xQT"/>
+                        <outlet property="MAIN_LBL_MOVES" destination="FYh-nR-8zK" id="dnG-OW-hOw"/>
+                        <outlet property="MAIN_LBL_TIME" destination="JRQ-U6-3Y5" id="eKX-kg-R5h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="889.85507246376824" y="-1300.4464285714284"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="memory" width="512" height="512"/>
+        <image name="skyBackground" width="866" height="1300"/>
+    </resources>
 </document>
